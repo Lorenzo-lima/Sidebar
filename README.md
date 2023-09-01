@@ -2,5 +2,5 @@
  Sidebar Store Petshop / Javascript
 
  <p>
-  <img src="images/sidebargif.gif" alt="Gif" width="450" height="300">
+  <img src="images/sidebargif.gif" alt="Gif" width="750" height="650">
  </p>
