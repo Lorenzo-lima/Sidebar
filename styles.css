@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  display: flex;
+}
+
+/* Sidebar */
+#sidebar {
+  background-color: var(--green);
+  width: 78px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+#sidebar.expanded {
+  width: 250px;
+}
+
+/* Menu da sidebar */
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 0px 14px;
+  margin: 24px 0px;
+}
+
+.menu img:first-child {
+  position: absolute;
+  left: 29px;
+  display: none;
+}
+
+#togglebtn {
+  display: flex;
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+
+/* Sessão de ícones */
+.icons {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 14px;
+}
+
+.icons div {
+  height: 50px;
+  cursor: pointer;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.hover {
+  background-color: var(--light-green);
+  transition: 0.1s;
+}
+
+.iconsText {
+  display: none;
+}
+
+.active {
+  background-color: var(--light-grey);
+}
+
+/* Sessão de Log out */
+.logout {
+  background-color: var(--light-green);
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  padding: 8px 14px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout div:first-child {
+  display: none;
+  align-items: center;
+  width: 100%;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.ProfilePhoto {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+}
+
+.ProfileDetails {
+  position: absolute;
+  left: 59px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.ProfileDetails p:first-child {
+  font-size: 15px;
+}
+
+.ProfileDetails p:nth-child(2) {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.logoutIcon {
+  width: 24px;
+  cursor: pointer;
+}
+
+/* Transition Anim */
+.fadeAnim {
+  animation: 0.1s fadeAnim forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeAnim {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Texto principal */
+#text p {
+  color: #084236;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px 20px;
+}
